@@ -49,4 +49,3 @@ Please make sure to test your tools thoroughly before submitting a pull request.
 Copyright 2024 Resola Inc.
 
 This software is made available for use within Resola Inc. only. Commercial use is prohibited.
-# notion-extension

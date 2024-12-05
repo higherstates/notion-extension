@@ -1,0 +1,10 @@
+.custom-copy-button {
+	background-color: inherit;
+	color: inherit;
+	border: 1px solid rgba(255, 255, 255, 0.13);
+	border-radius: 8px;
+	margin-left: 8px;
+}
+.custom-copy-button:hover {
+	background-color: rgba(255, 255, 255, 0.443);
+}
