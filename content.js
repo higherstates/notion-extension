@@ -78,9 +78,8 @@ function addCopyButtonForBoardView() {
 			if (task.querySelector(".custom-copy-button-on-board")) {
 				return;
 			}
-			const taskIdNode = task.querySelector(
-				'div[style*="line-height: 1.5; white-space: nowrap; word-break: normal;"]'
-			);
+			const taskIdNode = Array.from(task.querySelectorAll('div'))
+				.find(div => div.textContent.trim().startsWith('TK-')).firstChild;
 
 			if (taskIdNode) {
 				const taskId = taskIdNode.textContent.trim(); // Extract the task ID
@@ -121,7 +120,6 @@ function addCopyButtonForBoardView() {
 
 						// Append the icon container to the <a> tag
 						link.appendChild(copyIconContainer);
-						console.log("Added button for task " + taskId);
 					}
 					
 				}
