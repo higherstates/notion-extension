@@ -1,23 +1,28 @@
 .custom-copy-button {
-	background-color: inherit;
+	background-color: white;
 	color: inherit;
+	border-radius: 6px;
+	box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
 	border: 1px solid rgba(255, 255, 255, 0.13);
-	border-radius: 100%;
-	margin-left: 8px;
-
-	width: 35px;
-	height: 35px;
+	width: 26px;
+	height: 24px;
+	padding: 3px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.hidden-on-hover {
+.copy-button-on-task {
+	margin-top: 4px;
+	margin-left: 5px;
+}
+
+.show-on-hover {
 	opacity: 0;
 	transition: opacity 0.2s;
 }
 
-[role="row"]:hover .hidden-on-hover {
+[role="row"]:hover .show-on-hover {
 	opacity: 1;
 }
 
@@ -25,20 +30,37 @@
 	background-color: rgba(255, 255, 255, 0.443);
 }
 
-.custom-copy-on-board-icon {
-	background-color: inherit;
-	color: rgba(255, 255, 255, 0.81) !important;
-	border: 1px solid rgba(255, 255, 255, 0.13);
-	border-radius: 100%;
-
+.custom-copy-button-on-board  {
+	padding: 3px;	
+	border-radius: 4px;
 	width: 25px;
-	height: 25px;
-	display: inline-block;
-	cursor: pointer;
-	margin-left: 88%;
-	margin-bottom: 2%;
+	position: absolute;
+	right: 8px;
+	top: 40px;
+	opacity: 0;
 }
 
-.custom-copy-on-board-icon:hover {
-	background-color: rgba(255, 255, 255, 0.443);
+.notion-collection-item:hover .custom-copy-button-on-board {
+	opacity: 1;
+}
+
+
+#notion-toast-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.toast-message {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px 10px;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  font-size: 14px;
 }
