@@ -78,12 +78,8 @@ function addCopyButtonForBoardView() {
 			if (task.querySelector(".custom-copy-button-on-board")) {
 				return;
 			}
-			try {
-				const taskIdNode = Array.from(task.querySelectorAll('div'))
-					.find(div => div.textContent.trim().startsWith('TK-')).firstChild;
-			} catch (error) {
-				return;
-			}
+			let taskIdNode = Array.from(task.querySelectorAll('div'))
+				.find(div => div.textContent.trim().startsWith('TK-')).firstChild;
 
 			if (taskIdNode) {
 				const taskId = taskIdNode.textContent.trim(); // Extract the task ID
